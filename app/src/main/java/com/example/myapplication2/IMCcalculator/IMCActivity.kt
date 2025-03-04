@@ -37,7 +37,10 @@ class IMCActivity : AppCompatActivity() {
     private lateinit var tvAge: TextView
     private lateinit var btnCalculate: Button
 
-
+    //que es lo de companion object
+companion object {
+const val IMC_KEY = "IMC_RESULT"
+}
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,7 +100,31 @@ class IMCActivity : AppCompatActivity() {
             setAge()
         }
 
+        btnCalculate.setOnClickListener {
+            val result = calculateIMC()
+            navigateToResult(result)
+        }
+
     }
+
+    private fun navigateToResult(result:Double){
+        //esto faltaría explicar
+        val intent = Intent(this, ResultIMCActivity::class.java)
+        intent.putExtra(IMC_KEY,result)
+        startActivity(intent)
+    }
+
+//lo que hace la función calculateIMC
+   private fun calculateIMC():Double{
+       //esto es un formato decimal
+       val df = DecimalFormat("#.##")
+    //crea una variable llamada imc, que es resultado de calcular el porcentaje de dichos números
+       val imc = currentWeight / (currentHeight.toDouble()/100*currentHeight.toDouble()/100)
+    //crea una variable llamada resultado, que formatea el resultado para que tenga decimales
+       return df.format(imc).toDouble()
+    //crea un log en la consola para comprobar que va todo bien
+
+   }
 
 
     private fun setAge() {

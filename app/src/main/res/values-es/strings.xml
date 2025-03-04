@@ -9,4 +9,6 @@
     <string name="weight">Peso</string>
     <string name="age">Edad</string>
     <string name="calculate">Calcular IMC</string>
+    <string name="recalculate">Re-Calcular BMI</string>
+    <string name="result">Tu resultado</string>
 </resources>
