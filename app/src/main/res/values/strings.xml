@@ -10,4 +10,6 @@
     <string name="calculate">Calculate BMI</string>
     <string name="recalculate">Re-Calculate BMI</string>
     <string name="result">Your result</string>
+    <string name="error">Error</string>
+    <string name="title_bajo_peso">Peso por debajo</string>
 </resources>
