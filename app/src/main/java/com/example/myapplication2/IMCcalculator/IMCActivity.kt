@@ -66,7 +66,7 @@ const val IMC_KEY = "IMC_RESULT"
         btnSubtractAge = findViewById(R.id.btnSubtractAge)
         btnPlusAge = findViewById(R.id.btnPlusAge)
         tvAge = findViewById(R.id.tvAge)
-        btnCalculate = findViewById(R.id.btnCalculate)
+        btnCalculate = findViewById(R.id.btncalculate)
     }
 
     private fun initListeners() {
